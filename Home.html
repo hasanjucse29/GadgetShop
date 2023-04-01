@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Shop Management System</title>
+	<style>
+		body {
+			background-color: #c1f1f1;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			color: #333;
+		}
+		button {
+			background-color: #6CAF50;
+			color: #fff;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin: 10px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to Shop Management System</h1>
+	<div style="text-align:center;">
+		<button onclick="window.location.href='products.html'">Add Products</button>
+		<button onclick="window.location.href='customers.html'">Add Customers</button>
+		<button onclick="window.location.href='orders.html'">Add Orders</button>
+	</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock</title>
+	<style>
+		body {
+			text-align: center;
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div id="clock"></div>
+	<script>
+		function displayTime() {
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			var meridiem = "AM";
+			if (hours > 12) {
+				hours = hours - 12;
+				meridiem = "PM";
+			}
+			if (hours === 0) {
+				hours = 12;
+			}
+			if (hours < 10) {
+				hours = "0" + hours;
+			}
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
+			var timeString = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+			document.getElementById("clock").innerHTML = timeString;
+		}
+		displayTime();
+		setInterval(displayTime, 1000);
+	</script>
+</body>
+</html>
+

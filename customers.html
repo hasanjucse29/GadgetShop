@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: #c1f1f1;
+	}
+	form {
+		background-color: ##fff;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 10px;
+		border-radius: 30px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		text-align: left;
+	}
+	label {
+		display: block;
+		margin-bottom: 00px;
+		font-weight: bold;
+	}
+	input[type=text], textarea, input[type=number] {
+		padding: 07px;
+		border-radius: 5px;
+		border: none;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #333;
+	}
+	input[type=submit] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	input[type=submit]:hover {
+		background-color: #3e8e41;
+	}
+	input[type=reset] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-left: 10px;
+	}
+	input[type=reset]:hover {
+		background-color: #3e8e41;
+	}
+	h2 {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		color: #333;
+	}
+</style>
+	<title>Add Customer</title>
+</head>
+<body>
+	<h2>Add Customer</h2>
+	<form action="insert_customer.php" method="post">
+		<label for="first_name">First Name:</label>
+		<input type="text" id="first_name" name="first_name" required><br><br>
+		<label for="last_name">Last Name:</label>
+		<input type="text" id="last_name" name="last_name" required><br><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" required><br><br>
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address" required><br><br>
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city" required><br><br>
+		<label for="state">State:</label>
+		<input type="text" id="state" name="state" required><br><br>
+		<label for="zip">Zip:</label>
+		<input type="text" id="zip" name="zip" required><br><br>
+		<input type="submit" value="Add Customer">
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>

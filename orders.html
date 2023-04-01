@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: #c1f1f1;
+	}
+	form {
+		background-color: ##fff;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 10px;
+		border-radius: 30px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		text-align: left;
+	}
+	label {
+		display: block;
+		margin-bottom: 00px;
+		font-weight: bold;
+	}
+	input[type=text], textarea, input[type=number] {
+		padding: 07px;
+		border-radius: 5px;
+		border: none;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #333;
+	}
+	input[type=submit] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	input[type=submit]:hover {
+		background-color: #3e8e41;
+	}
+	input[type=reset] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-left: 10px;
+	}
+	input[type=reset]:hover {
+		background-color: #3e8e41;
+	}
+	h2 {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		color: #333;
+	}
+	.title {
+		text-align: center;
+	}
+</style>
+
+	<title>New Order</title>
+</head>
+<body>
+	<h1 class="title">Place New Order</h1>
+	<form action="insert_order.php" method="post">
+		<label for="customer_id">Customer ID:</label>
+		<input type="text" id="customer_id" name="customer_id" required><br><br>
+		
+		<label for="product_id">Product ID:</label>
+		<input type="text" id="product_id" name="product_id" required><br><br>
+		
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity" name="quantity" required><br><br>
+		
+		<input type="submit" value="Place Order">
+	</form>
+</body>
+</html>

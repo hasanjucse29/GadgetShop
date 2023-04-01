@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background-color: #c1f1f1;
+	}
+	form {
+		background-color: ##fff;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 10px;
+		border-radius: 30px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		text-align: left;
+	}
+	label {
+		display: block;
+		margin-bottom: 00px;
+		font-weight: bold;
+	}
+	input[type=text], textarea, input[type=number] {
+		padding: 07px;
+		border-radius: 5px;
+		border: none;
+		width: 100%;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #333;
+	}
+	input[type=submit] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+	input[type=submit]:hover {
+		background-color: #3e8e41;
+	}
+	input[type=reset] {
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-left: 10px;
+	}
+	input[type=reset]:hover {
+		background-color: #3e8e41;
+	}
+	h2 {
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		color: #333;
+	}
+</style>
+	<title>Add Product</title>
+</head>
+<body>
+	<h2>Add Product</h2>
+	<form action="insert_product.php" method="post">
+		<label for="product_name">Product Name:</label>
+		<input type="text" id="product_name" name="product_name" required><br><br>
+		<label for="product_description">Product Description:</label>
+		<textarea id="product_description" name="product_description"></textarea><br><br>
+		<label for="product_type">Product Category:</label>
+		<select id="product_type" name="product_type" required>
+			<option value="">Select Type</option>
+			<option value="Electronics">Smartphone</option>
+			<option value="Clothing">Laptop</option>
+			<option value="Books">Gadgets</option>
+			<option value="Beauty">Electronics</option>
+			<option value="Home">Others</option>
+		</select><br><br>
+		<label for="brand_name">Brand Name:</label>
+		<input type="text" id="brand_name" name="brand_name"><br><br>
+		<label for="price">Price:</label>
+		<input type="number" id="price" name="price" step="0.01" min="0" required><br><br>
+		<label for="stock">Stock:</label>
+		<input type="number" id="stock" name="stock" min="0" required><br><br>
+		<input type="submit" value="Add Product">
+		<input type="reset" value="Reset">
+	</form>
+</body>
+</html>
